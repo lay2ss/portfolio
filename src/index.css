@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+html {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #402A38 10%,
+    #262426 30%,
+    #262426 50%,
+    #402A38 70%,
+    #262426 90%
+  );
+  height: 100vh;
+  padding-top: 20px;
+}
+:root{
+    --pink: #fccee8c3;
+    --gray: #855d7631;
+    --border-color: #988a9136; 
+}
+.nav{
+    @apply flex lg:w-[520px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4;
+}
+.poppins-200 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.figtree-300 {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.figtree-400 {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.wrapper{
+    @apply flex w-[100vw] justify-center;
+}
+.nav{
+    color: var(--pink);
+    background-color: var(--gray);
+    border: 1px solid var(--border-color);
+}
+.mobile-nav{
+    @apply hidden lg:flex gap-4 items-center text-sm tracking-wider;
+}
+.btn{
+    @apply text-black border-0 rounded-[3px] tracking-wider h-10 w-28 hover:bg-pink-200 cursor-pointer text-sm;
+}
+.btn{
+    background-color: var(--pink);
+}
+
