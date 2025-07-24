@@ -46,13 +46,23 @@ html {
     background-color: var(--gray);
     border: 1px solid var(--border-color);
 }
-.mobile-nav{
+.desktop-nav{
     @apply hidden lg:flex gap-4 items-center text-sm tracking-wider;
 }
+.mobile-nav{
+  @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm;
+}
+.mobile-nav{
+  color: var(--pink);
+  background-color: var(--gray);
+  border: 1px solid var(--border-color);
+}
 .btn{
-    @apply text-black border-0 rounded-[3px] tracking-wider h-10 w-28 hover:bg-pink-200 cursor-pointer text-sm;
+    @apply text-black border-0 rounded-[3px] tracking-wider h-10 hover:bg-pink-200 cursor-pointer text-sm;
 }
 .btn{
     background-color: var(--pink);
 }
-
+.menu_icon{
+  @apply cursor-pointer flex flex-col gap-2 h-min relative lg:hidden;
+}
