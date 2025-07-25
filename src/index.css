@@ -2,28 +2,23 @@
 @tailwind utilities;
 
 html {
-  background: radial-gradient(
-    circle at 30% 30%,
-    #402A38 10%,
-    #262426 30%,
-    #262426 50%,
-    #402A38 70%,
-    #262426 90%
-  );
+  background-color: #0e0e0e;
   height: 100vh;
   padding-top: 20px;
 }
 :root{
     --pink: #fccee8c3;
-    --gray: #855d7631;
+    --gray: #3d363b31;
     --border-color: #988a9136; 
-}
-.nav{
-    @apply flex lg:w-[520px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4;
 }
 .poppins-200 {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
+  font-style: normal;
+}
+.poppins-300 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 .figtree-300 {
@@ -38,8 +33,17 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+.lora-400 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
 .wrapper{
-    @apply flex w-[100vw] justify-center;
+    @apply flex w-full justify-center;
+}
+.nav{
+    @apply flex lg:w-[520px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4;
 }
 .nav{
     color: var(--pink);
@@ -66,3 +70,29 @@ html {
 .menu_icon{
   @apply cursor-pointer flex flex-col gap-2 h-min relative lg:hidden;
 }
+h1{
+  @apply text-3xl lg:text-4xl
+}
+h1, p{
+  color: var(--pink);
+}
+.wave-hand {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+.canvas-loader{
+  background-color: #0e0e0e;
+}
+

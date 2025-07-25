@@ -12,7 +12,7 @@ const Nav = () => {
     <>
     <nav className="wrapper fixed z-50">
         <div className="nav poppins-200">
-            <span className="text-2xl tracking-wider cursor-pointer">lay.</span> 
+            <span className="text-2xl tracking-wider cursor-pointer"><a href="/">Lay.</a></span> 
             <div className="flex gap-5 cursor-pointer items-center">
                 <ul className="desktop-nav figtree-400">
                 <li>SKILLS</li>
@@ -28,7 +28,7 @@ const Nav = () => {
                   </div>
                 </div> 
     </nav>
-    <nav className={`flex justify-center lg:hidden w-[100vw] fixed top-20 z-50 ${isOpen ? '' : 'hidden'}`}>
+    <nav className={`flex justify-center lg:hidden w-full fixed top-20 z-50 ${isOpen ? '' : 'hidden'}`}>
       <div className={`mobile-nav figtree-400 mt-2`}>
                   <ul className={`flex flex-col gap-2 p-5 cursor-pointer`}>
                     <li>SKILLS</li>
