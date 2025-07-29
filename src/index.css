@@ -7,24 +7,14 @@ html {
   padding-top: 20px;
 }
 :root{
-    --pink: #fccee8c3;
-    --gray: #3d363b31;
-    --border-color: #988a9136; 
+    --pink: #FF69B4; /*#fccee8c3  #F4A6B9*/
+    --background: #3d363b31;
+    --border-color: #988a9136;
+    --gray: #ABB2BF;
 }
-.poppins-200 {
+.poppins-400 {
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-.poppins-300 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-.figtree-300 {
-  font-family: "Figtree", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 .figtree-400 {
@@ -42,12 +32,15 @@ html {
 .wrapper{
     @apply flex w-full justify-center;
 }
+.accent{
+  color: var(--pink);
+}
 .nav{
     @apply flex lg:w-[520px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4;
 }
 .nav{
-    color: var(--pink);
-    background-color: var(--gray);
+    color: white;
+    background-color: var(--background);
     border: 1px solid var(--border-color);
 }
 .desktop-nav{
@@ -57,15 +50,18 @@ html {
   @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm;
 }
 .mobile-nav{
-  color: var(--pink);
-  background-color: var(--gray);
+  color: white;
+  background-color: var(--background);
   border: 1px solid var(--border-color);
 }
 .btn{
-    @apply text-black border-0 rounded-[3px] tracking-wider h-10 hover:bg-pink-200 cursor-pointer text-sm;
+    @apply text-white border-0 rounded-[3px] tracking-wider h-10 hover:bg-pink-400 cursor-pointer text-sm;
 }
 .btn{
     background-color: var(--pink);
+}
+.btn:hover {
+    box-shadow: 0 0 5px var(--pink), 0 0 10px var(--pink), 0 0 30px var(--pink);
 }
 .menu_icon{
   @apply cursor-pointer flex flex-col gap-2 h-min relative lg:hidden;
@@ -73,16 +69,18 @@ html {
 h1{
   @apply text-3xl lg:text-4xl
 }
-h1, p{
-  color: var(--pink);
+h1{
+  color: white;
 }
-.wave-hand {
+p{
+  color: var(--gray);
+}
+/* .wave-hand {
   display: inline-block;
   animation: wave 1.5s infinite;
   transform-origin: 70% 70%;
-}
-
-@keyframes wave {
+} */
+/* @keyframes wave {
   0% { transform: rotate(0deg); }
   10% { transform: rotate(14deg); }
   20% { transform: rotate(-8deg); }
@@ -91,8 +89,4 @@ h1, p{
   50% { transform: rotate(10deg); }
   60% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
-}
-.canvas-loader{
-  background-color: #0e0e0e;
-}
-
+} */
