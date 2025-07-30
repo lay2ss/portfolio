@@ -7,9 +7,13 @@ import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import { useTranslation } from 'react-i18next';
+
 
 
 const Hero = () => {
+
+    const { t } = useTranslation();
 
     const isMobile = useMediaQuery({maxWidth: 450});
     const isTablet = useMediaQuery({maxWidth:768, minWidth:450});
@@ -25,9 +29,9 @@ const Hero = () => {
   return (    
     <section ref={heroRef} className="p-7">
         <div className="wrapper relative top-15 "> 
-            <div className="text-center">
-                <h1 className="figtree-400"><span className="lora-400">Laís</span> is a <span className="accent"> Full Stack Developer</span></h1>
-                <p className="mt-2 poppins-400 lg:w-[50vw] md:w-[70vw]">She crafts thoughtful, functional, and future-ready web experiences driven by curiosity and code.</p>
+            <div className="text-center flex flex-col items-center">
+                <h1 className="figtree-400">{t("greeting")} <span className="lora-400">Laís</span>. <span className="accent">{t("greetingAccent")}</span>.</h1>
+                <p className="mt-4 poppins-400 lg:max-w-[50vw] md:max-w-[70vw]">{t("desc")}</p>
             </div>
             {/* <div className="h-[85vh] inset-0 absolute">
                 <Canvas className="w-full h-full">
