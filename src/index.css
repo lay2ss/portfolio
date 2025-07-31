@@ -4,12 +4,11 @@
 html {
   background-color: #0e0e0e;
   height: 100vh;
-  padding-top: 20px;
 }
 :root{
     --pink: #FF69B4; /*#fccee8c3  #F4A6B9*/
     --background: #3d363b31;
-    --border-color: #988a9136;
+    --border-color: #988a9136; 
     --gray: #ABB2BF;
 }
 .poppins-400 {
@@ -36,7 +35,7 @@ html {
   color: var(--pink);
 }
 .nav{
-    @apply flex lg:max-w-[1024px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4;
+    @apply flex lg:max-w-[1024px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4 mt-[30px];
     color: white;
     background-color: var(--background);
     border: 1px solid var(--border-color);
@@ -45,7 +44,7 @@ html {
     @apply hidden lg:flex gap-6 items-center text-sm tracking-wider;
 }
 .mobile-nav{
-  @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm;
+  @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm mt-[20px];
   color: white;
   background-color: var(--background);
   border: 1px solid var(--border-color);
@@ -104,10 +103,6 @@ p{
 .turn {
   transform: rotate(180deg);
 }
-
-
-
-
 /* .wave-hand {
   display: inline-block;
   animation: wave 1.5s infinite;

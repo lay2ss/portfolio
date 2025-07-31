@@ -9,15 +9,15 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { useTranslation } from 'react-i18next';
 
-
-
 const Hero = () => {
-
+    
     const { t } = useTranslation();
-
+    
     const isMobile = useMediaQuery({maxWidth: 450});
     const isTablet = useMediaQuery({maxWidth:768, minWidth:450});
     const heroRef = useRef(null);
+ 
+
     useGSAP(() => {
         gsap.fromTo(
             heroRef.current,
@@ -27,11 +27,11 @@ const Hero = () => {
     }, []);
 
   return (    
-    <section ref={heroRef} className="p-7">
-        <div className="wrapper relative top-15 "> 
-            <div className="text-center flex flex-col items-center">
+    <section ref={heroRef} className="h-[95vh]">
+        <div className="wrapper relative items-center h-full">
+            <div className="text-center flex flex-col items-center px-4">
                 <h1 className="figtree-400">{t("greeting")} <span className="lora-400">Laís</span>. <span className="accent">{t("greetingAccent")}</span>.</h1>
-                <p className="mt-4 poppins-400 lg:max-w-[50vw] md:max-w-[70vw]">{t("desc")}</p>
+                <p className="mt-4 poppins-400 lg:max-w-[30vw] md:max-w-[70vw]">{t("desc")}</p>
             </div>
             {/* <div className="h-[85vh] inset-0 absolute">
                 <Canvas className="w-full h-full">

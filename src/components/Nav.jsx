@@ -65,7 +65,7 @@ const Nav = () => {
                 </div> 
     </nav>
     <nav className={`flex justify-center lg:hidden w-full fixed top-20 z-50 ${isOpen ? '' : 'hidden'}`}>
-      <div className={`mobile-nav figtree-400 mt-2`}>
+      <div className={`mobile-nav figtree-400`}>
                   <ul className={`flex flex-col gap-2 p-5 cursor-pointer`}>
                     <li>{t("projects")}</li>
                     <li>{t("skills")}</li>
