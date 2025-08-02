@@ -31,7 +31,7 @@ const ParticlesBackground = () => {
   }, []);
 
   return (
-    <div id="particles-js" className="absolute top-0 left-0 w-full h-full -z-10" />
+    <div id="particles-js" className="top-0 left-0 w-full h-full -z-10 fixed" />
   );
 };
 

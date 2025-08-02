@@ -1,15 +1,20 @@
-import Nav from "./components/nav";
+import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ParticleBackground from "./components/ParticleBackground";
+import ProjectsSection from "./components/ProjectsSection";
+
 
 function App() {
 
   return (
-    <main>
+    <>
       <ParticleBackground />
+    <main>
       <Nav />
       <Hero />
+      <ProjectsSection />
     </main>
+    </>
   )
 }
 

@@ -47,12 +47,12 @@ const Nav = () => {
                   <li className="hover-li">{t("about")}</li>
                 </ul>
             <div>
-            <div className="flex items-center gap-2 btn-lang" onClick={turnArrow}> 
+            <div className="flex items-center gap-2 btn-lang figtree-400 text-[14px]" onClick={turnArrow}> 
               <button>{language === 'en' ? 'EN' : 'PT'}</button> 
               <img src="/assets/arrow.png" alt="arrow icon" className={`w-min h-min arrow ${turn ? 'turn' : ''}`} />
             </div>
-              <div className={`absolute flex justify-center w-[63px] ${turn ? '' : 'hidden'}`}>
-                <button className="btn-s border w-full" onClick={() => language === 'en' ? changeLanguage('pt') : changeLanguage('en')}>{language === 'en' ? 'PT' : 'EN'}</button>
+              <div className={`absolute flex justify-center w-[60px] ${turn ? '' : 'hidden'}`}>
+                <button className="btn-s border w-full rounded-b-sm figtree-400 text-[14px]" onClick={() => language === 'en' ? changeLanguage('pt') : changeLanguage('en')}>{language === 'en' ? 'PT' : 'EN'}</button>
               </div>
             </div>
                 <button className="btn figtree-400 w-28 hidden lg:inline-block">{t("cta")}</button>

@@ -4,6 +4,7 @@
 html {
   background-color: #0e0e0e;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 :root{
     --pink: #FF69B4; /*#fccee8c3  #F4A6B9*/
@@ -50,21 +51,38 @@ html {
   border: 1px solid var(--border-color);
 }
 .btn{
-    @apply text-white border-0 rounded-[3px] tracking-wider h-10 hover:bg-pink-400 cursor-pointer text-sm;
+    @apply text-white border-0 rounded-sm tracking-wider h-10 hover:bg-pink-400 cursor-pointer text-sm;
     background-color: var(--pink);
 }
-.btn:hover{
-    box-shadow: 0 0 5px var(--pink), 0 0 5px var(--pink), 0 0 20px var(--pink);
+.btn-card{
+  @apply text-white border-1 rounded-sm tracking-wider h-10 cursor-pointer text-sm flex gap-2 items-center;
+  border-color: var(--pink);
+}
+.btn-card:hover{
+  background-color: var(--pink);
+}
+.btn-card-sec{
+  @apply text-white border-1 rounded-sm tracking-wider h-10 cursor-pointer text-sm p-2 flex gap-2 items-center;
+  border-color: var(--border-color);
+}
+.btn-border{
+  border-color: var(--border-color);
+}
+.btn-card-sec:hover{
+  background-color: var(--border-color);
+}
+.btn:hover, .arrow2:hover{
+  box-shadow: 0 0 5px var(--pink), 0 0 5px var(--pink), 0 0 20px var(--pink);
 }
 .btn-lang{
-  @apply h-10 rounded-[3px] p-3;
+  @apply h-10 rounded-t-sm p-3;
   border: 1px solid var(--border-color);
 }
 .btn-lang:hover{
   background-color: var(--border-color);
 }
 .btn-s{
-  @apply backdrop-blur-sm;
+  @apply backdrop-blur-sm h-10;
   border-color: var(--border-color);
   background-color: var(--border-color);
 }
@@ -103,6 +121,18 @@ p{
 .turn {
   transform: rotate(180deg);
 }
+.arrow2{
+  @apply absolute bottom-0 rounded-full box-border p-1;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+  transform: translate(-50%, -50%);
+}
+.card-border{
+  @apply border;
+  border-color: var(--border-color);
+  background-color: var(--background)
+}
+
 /* .wave-hand {
   display: inline-block;
   animation: wave 1.5s infinite;
