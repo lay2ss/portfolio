@@ -6,8 +6,8 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [turn, setTurn] = useState(false);
 
-  const { i18n } = useTranslation();
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
   const [language, setLanguage] = useState('');
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Nav = () => {
                   <li className="hover-li">{t("about")}</li>
                 </ul>
             <div>
-            <div className="flex items-center gap-2 btn-lang figtree-400 text-[14px]" onClick={turnArrow}> 
+            <div className="flex items-center gap-2 btn-lang figtree-400 text-[14px] w-[60px]" onClick={turnArrow}> 
               <button>{language === 'en' ? 'EN' : 'PT'}</button> 
               <img src="/assets/arrow.png" alt="arrow icon" className={`w-min h-min arrow ${turn ? 'turn' : ''}`} />
             </div>
