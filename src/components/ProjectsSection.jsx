@@ -16,16 +16,16 @@ const ProjectsSection = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState('');
   
-    useEffect(() => {
-      setLanguage(i18n.language);
-      const onLanguageChanged = (lng) => {
-        setLanguage(lng);
-      };
-      i18n.on('languageChanged', onLanguageChanged);
-      return () => {
-        i18n.off('languageChanged', onLanguageChanged);
-      };
-    }, [i18n]);
+  useEffect(() => {
+    setLanguage(i18n.language);
+    const onLanguageChanged = (lng) => {
+      setLanguage(lng);
+    };
+    i18n.on('languageChanged', onLanguageChanged);
+    return () => {
+      i18n.off('languageChanged', onLanguageChanged);
+    };
+  }, [i18n]);
 
   useGSAP(() => {
     gsap.from(cardsRef.current, {
@@ -41,6 +41,26 @@ const ProjectsSection = () => {
     });
   }, []);
 
+  const handleMouseEnter = (i) => {
+    gsap.to(cardsRef.current[i], {
+      scale: 1.03,
+      y: -20,
+      zIndex: 10,
+      duration: 0.6,
+      ease: 'power3.out',
+    });
+  };
+
+  const handleMouseLeave = (i) => {
+    gsap.to(cardsRef.current[i], {
+      scale: 1,
+      y: 0,
+      zIndex: 1,
+      duration: 0.6,
+      ease: 'power3.out',
+    });
+  };
+
   return (
     <section className="wrapper h-[100vh]" id="projects" ref={projectsRef}>
         <div className='flex w-[90vw] mt-30 lg:max-w-[1024px] flex-col'>
@@ -49,7 +69,9 @@ const ProjectsSection = () => {
             {(language === 'en' ? projectsDataEn : projectsDataPt).map((item, index) => (
             <div
             key={item.id}
-            ref={el => cardsRef.current[index] = el}>
+            ref={el => cardsRef.current[index] = el}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}>
               <ProjectsCard
               image = {item.image}
               tools = {item.tools.map((item, index) => (<span key={index}> <span className='accent'>#</span>{item}</span>))}
