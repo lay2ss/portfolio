@@ -81,6 +81,14 @@ const ProjectsSection = () => {
             </div>
             ))}
           </div>
+          <div className='flex justify-center py-8'>
+            <button className='btn-arrow3'>
+              <p>{t("ctaPjc")}</p>
+              <div className=''>
+                <img src="/assets/arrow3.png" alt="" className='w-min h-min arrow3' />
+              </div>
+            </button>
+          </div>
         </div>
     </section>
   )

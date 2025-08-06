@@ -127,6 +127,20 @@ p{
   background-color: var(--background);
   transform: translate(-50%, -50%);
 }
+.btn-arrow3{
+  @apply  border rounded-full flex items-center gap-3 px-3 py-2;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+} 
+.arrow3{
+  transition: transform 0.3s ease;
+}
+.btn-arrow3:hover{
+  background-color: var(--border-color);
+}
+.btn-arrow3:hover .arrow3{
+  transform: rotate(40deg);
+}
 .card-border{
   @apply border;
   border-color: var(--border-color);
