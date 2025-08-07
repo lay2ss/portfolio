@@ -81,8 +81,8 @@ const ProjectsSection = () => {
             </div>
             ))}
           </div>
-          <div className='flex justify-center py-8'>
-            <button className='btn-arrow3'>
+          <div className='flex justify-center py-10'>
+            <button className='btn-arrow3 figtree-400 cursor-pointer'>
               <p>{t("ctaPjc")}</p>
               <div className=''>
                 <img src="/assets/arrow3.png" alt="" className='w-min h-min arrow3' />

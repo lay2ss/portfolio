@@ -6,7 +6,7 @@ const ProjectsCard = ({image, tools, header, desc}) => {
             <img src={image} alt="project image" className="object-cover"/>
         </div>
         <p className="poppins-400 mt-4 border-t-1 border-b-1 btn-border p-1">{tools}</p>
-        <h2 className="text-white text-2xl lg:text-3xl mt-2 figtree-400">{header}</h2>
+        <h2 className="mt-2 figtree-400">{header}</h2>
         <p className="mt-2 mb-3 poppins-400">{desc}</p>
         <div className="flex gap-5">
             <button className="btn-card p-2 figtree-400">
