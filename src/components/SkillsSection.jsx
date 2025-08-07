@@ -1,9 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import Globe from './Globe';
 import SkillsCard from './SkillsCard';
+import { skills } from '../data/skillsData';
+import { useState, useEffect } from 'react';
 
 const SkillsSection = () => {
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState('');
+    
+    useEffect(() => {
+      setLanguage(i18n.language);
+      const onLanguageChanged = (lng) => {
+        setLanguage(lng);
+      };
+      i18n.on('languageChanged', onLanguageChanged);
+      return () => {
+        i18n.off('languageChanged', onLanguageChanged);
+      };
+    }, [i18n]);
 
   return (
     <section className="wrapper h-[100vh]">
@@ -13,11 +28,16 @@ const SkillsSection = () => {
               <div style={{ height: '35vh'}} className='cursor-grabbing'>
                   <Globe />
               </div>
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 mx-auto h-min'>
-                  <SkillsCard
-                    header = ''
-                    tools = ''
-                  />
+              <div
+              className='grid grid-cols-1 sm:grid-cols-2 gap-3 mx-auto h-min'>
+                {skills.map((item) => (
+                  <div key={item.id}>
+                    <SkillsCard
+                      header = {language === 'en' ? item.headerEn : item.headerPt}
+                      tools = {item.desc}
+                    />
+                  </div>
+                ))}  
               </div>
             </div>
         </div>
