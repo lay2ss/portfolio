@@ -19,8 +19,8 @@ export const skills = [
     },
     {
         id: 4,
-        headerEn: ' Frameworks',
-        headerPt: ' Frameworks',
+        headerEn: 'Frameworks',
+        headerPt: 'Frameworks',
         desc: 'React  Next.js  Express.js  TailwindCSS  Node.js'
     },
     {
