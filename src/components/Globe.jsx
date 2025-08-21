@@ -12,8 +12,6 @@ const logos = [
   { name: 'TypeScript', src: '/logos/typescript.png' },
   { name: 'Git', src: '/logos/git.png' },
   { name: 'Node.js', src: '/logos/nodejs.png' },
-  { name: 'Sass', src: '/logos/sass.png' },
-  { name: 'Vite', src: '/logos/vitejs.png' },
   { name: 'CSS', src: '/logos/css3.png' },
 ]
 

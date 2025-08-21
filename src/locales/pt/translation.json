@@ -1,9 +1,10 @@
 {
   "greeting": "Oi, eu sou a",
-  "greetingAccent": "Desenvolvedora Full Stack",
+  "greetingAccent": "Software Developer",
   "desc": "Desenvolvo soluções web funcionais, estratégicas e prontas para os desafios de amanhã — sempre guiada pela curiosidade e pela tecnologia.",
   "skills": "HABILIDADES",
   "projects": "PROJETOS",
+  "contact": "CONTATO",
   "about": "SOBRE",
   "cta": "MENSAGEM",
   "ctaPjc": "Ver todos"

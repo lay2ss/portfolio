@@ -8,9 +8,9 @@ html {
 }
 :root{
     --pink: #FF69B4; /*#fccee8c3  #F4A6B9*/
-    --background: #3d363b31;
+    --background: #f3f3f310; /*#f3f3f310    #1414149c*/
     --border-color: #988a9136; 
-    --gray: #ABB2BF;
+    --gray: #f3f3f398;
 }
 .poppins-400 {
   font-family: "Poppins", sans-serif;
@@ -32,26 +32,28 @@ html {
 .wrapper{
     @apply flex w-full justify-center;
 }
+.section-wrapper{
+  @apply flex w-[90vw] lg:max-w-[1024px] flex-col;
+}
 .accent{
   color: var(--pink);
 }
 .nav{
-    @apply flex lg:max-w-[1024px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4 mt-[30px];
+    @apply flex lg:max-w-[1024px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4 mt-[30px] rounded-full;
     color: white;
-    background-color: var(--background);
     border: 1px solid var(--border-color);
 }
 .desktop-nav{
     @apply hidden lg:flex gap-6 items-center text-sm tracking-wider;
 }
 .mobile-nav{
-  @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm mt-[20px];
+  @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm mt-[20px] rounded-xl;
   color: white;
-  background-color: var(--background);
   border: 1px solid var(--border-color);
 }
 .btn{
-    @apply text-white border-0 rounded-sm tracking-wider h-10 hover:bg-pink-400 cursor-pointer text-sm;
+    @apply text-white border-0 rounded-full tracking-wider h-10 hover:bg-pink-400 cursor-pointer text-sm;
+    border: 1px solid var(--pink);
     background-color: var(--pink);
 }
 .btn-card{
@@ -75,16 +77,16 @@ html {
   box-shadow: 0 0 5px var(--pink), 0 0 5px var(--pink), 0 0 20px var(--pink);
 }
 .btn-lang{
-  @apply h-10 rounded-t-sm p-3;
+  @apply p-2;
   border: 1px solid var(--border-color);
 }
 .btn-lang:hover{
-  background-color: var(--border-color);
+  background-color: var(--background);
 }
 .btn-s{
-  @apply backdrop-blur-sm h-10;
+  @apply backdrop-blur-sm rounded-md p-1;
   border-color: var(--border-color);
-  background-color: var(--border-color);
+  background-color: var(--pink);
 }
 .btn-s:hover{
   border-color: var(--pink);
@@ -106,7 +108,7 @@ html {
   width: 100%;
 }
 .menu_icon{
-  @apply cursor-pointer flex flex-col gap-2 h-min relative lg:hidden;
+  @apply cursor-pointer flex flex-col gap-2 h-min relative lg:hidden mr-2;
 }
 h1{
   @apply text-3xl lg:text-4xl;
@@ -147,10 +149,26 @@ p{
 .btn-arrow3:hover .arrow3{
   transform: rotate(40deg);
 }
+.btn-card:hover .arrow3{
+  transform: rotate(40deg); 
+}
 .card-border{
   @apply border;
   border-color: var(--border-color);
   background-color: var(--background)
+}
+.icon-card{
+  @apply border w-fit rounded-xl p-3 cursor-pointer;
+  border-color: var(--border-color);
+}
+.icon-card img{
+  @apply opacity-60;
+}
+.icon-card:hover{
+  background-color: var(--background);
+}
+.icon-card:hover img{
+  @apply opacity-100;
 }
 /* .wave-hand {
   display: inline-block;

@@ -15,7 +15,7 @@ const SkillsCard = ({header, tools}) => {
   return (
     <div ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="p-3 max-w-[250px] h-min card-border relative">
+      className="p-3 max-w-[250px] h-min card-border relative rounded-sm">
 
         <div
           className="pointer-events-none absolute inset-0"

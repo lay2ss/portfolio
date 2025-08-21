@@ -21,10 +21,10 @@ const SkillsSection = () => {
     }, [i18n]);
 
   return (
-    <section className="wrapper h-[100vh]">
-        <div className='flex w-[90vw] mt-30 lg:max-w-[1024px] flex-col'>
+    <section className="wrapper">
+        <div className='section-wrapper mt-5'>
             <h1 className='figtree-400'><span className='accent tracking-widest'>/</span>{t("skills")}</h1>
-            <div className='flex flex-wrap mt-5 justify-center gap-5'>
+            <div className='flex flex-wrap mt-10 justify-center gap-5'>
               <div style={{ height: '35vh'}} className='cursor-grabbing'>
                   <Globe />
               </div>

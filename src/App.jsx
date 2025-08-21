@@ -1,8 +1,9 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import ParticleBackground from "./components/ParticleBackground";
+import ParticleBackground from "./components/background/ParticleBackground";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
+import AboutSection from "./components/AboutSection";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <ProjectsSection />
       <SkillsSection />
+      <AboutSection />
     </main>
     </>
   )

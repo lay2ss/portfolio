@@ -1,10 +1,11 @@
 {
   "greeting": "Hi, I'm",
-  "greetingAccent": "Full Stack Developer",
+  "greetingAccent": "Software Developer",
   "desc": "I craft thoughtful, functional, and future-ready web experiences, driven by curiosity and code.",
   "skills": "SKILLS",
   "projects": "PROJECTS",
   "about": "ABOUT",
+  "contact": "CONTACT",
   "cta": "LET'S TALK",
   "ctaPjc": "View all"
 }
