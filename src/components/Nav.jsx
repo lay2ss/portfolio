@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import '/src/menuIcon.css';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from "react-router-dom";
+import { useScrollUrlUpdater } from "./useScrollUrlUpdater";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,8 @@ const Nav = () => {
   const [path, setpath] = useState();
   const [language, setLanguage] = useState('');
 
+  useScrollUrlUpdater();
+  
   useEffect(() => {
     setpath(location.pathname)
   }, [location.pathname]);
@@ -55,6 +58,7 @@ const Nav = () => {
                   pathName: "/contact"
                 }];
 
+
   return (
     <>
     <nav className="wrapper fixed z-50">
@@ -65,7 +69,7 @@ const Nav = () => {
           </div>
             <div className="flex gap-11 cursor-pointer items-center">
                 <ul className="desktop-nav figtree-400">
-                  {list.map((i, index) => path === i.pathName? 
+                  {list.map((i, index) => path === i.pathName ? 
                     (<a href={i.href} key={index}> 
                     <div className="flex items-center gap-2">
                       <button className="border-pink-400 border-3 h-min rounded-full"></button>

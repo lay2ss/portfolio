@@ -4,7 +4,7 @@ import ParticleBackground from "./components/background/ParticleBackground";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 import AboutSection from "./components/AboutSection";
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 function App() {
 
