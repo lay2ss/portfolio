@@ -1,23 +1,25 @@
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import ParticleBackground from "./components/background/ParticleBackground";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 import AboutSection from "./components/AboutSection";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 
 function App() {
 
   return (
-    <>
+    <HashRouter>
       <ParticleBackground />
-    <main>
-      <Nav />
-      <Hero />
-      <ProjectsSection />
-      <SkillsSection />
-      <AboutSection />
-    </main>
-    </>
+      <main>
+        <Nav />
+        <Home />
+        <ProjectsSection />
+        <SkillsSection />
+        <AboutSection />
+      </main> 
+    </HashRouter>
+   
   )
 }
 

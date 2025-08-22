@@ -44,7 +44,7 @@ html {
     border: 1px solid var(--border-color);
 }
 .desktop-nav{
-    @apply hidden lg:flex gap-6 items-center text-sm tracking-wider;
+    @apply hidden md:flex gap-6 items-center text-sm tracking-wider;
 }
 .mobile-nav{
   @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm mt-[20px] rounded-xl;
@@ -108,7 +108,7 @@ html {
   width: 100%;
 }
 .menu_icon{
-  @apply cursor-pointer flex flex-col gap-2 h-min relative lg:hidden mr-2;
+  @apply cursor-pointer flex flex-col gap-2 h-min relative md:hidden mr-2;
 }
 h1{
   @apply text-3xl lg:text-4xl;

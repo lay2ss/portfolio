@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 import GradientText from "/src/components/animations/GradientText.jsx";
 import Loop from "/src/components/animations/Loop.jsx";
 
-const Hero = () => {
+const Home = () => {
     
     const { t } = useTranslation();
     
@@ -39,7 +39,7 @@ const Hero = () => {
     }, []);
 
   return (    
-    <section ref={heroRef} className="h-[100vh]">
+    <section ref={heroRef} id="home" className="h-[100vh]">
         <div className="wrapper relative">
             <div className="flex flex-col space-y-2 md:space-y-4 p-10 md:p-20 mt-20 md:mt-10 ">
                 <div className="max-w-[280px]">
@@ -88,4 +88,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Home

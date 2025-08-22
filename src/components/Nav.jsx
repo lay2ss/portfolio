@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import '/src/menuIcon.css';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from "react-router-dom";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,13 @@ const Nav = () => {
 
   const { t } = useTranslation();
   const { i18n } = useTranslation();
+  const location = useLocation();
+  const [path, setpath] = useState();
   const [language, setLanguage] = useState('');
+
+  useEffect(() => {
+    setpath(location.pathname)
+  }, [location.pathname]);
 
   useEffect(() => {
     setLanguage(i18n.language);
@@ -31,6 +38,22 @@ const Nav = () => {
   const turnArrow = () => {
     setTurn(prev => !prev);
   }
+  
+  const list = [{
+                  name: "HOME",
+                  href: "#home",
+                  pathName: "/home"
+                }, 
+                {
+                  name: t("projects"),
+                  href: "#projects",
+                  pathName: "/projects"
+                }, 
+                {
+                  name: t("contact"),
+                  href: "#contact",
+                  pathName: "/contact"
+                }];
 
   return (
     <>
@@ -42,12 +65,21 @@ const Nav = () => {
           </div>
             <div className="flex gap-11 cursor-pointer items-center">
                 <ul className="desktop-nav figtree-400">
-                  <li className="hover-li">HOME</li>
-                  <li className="hover-li">{t("projects")}</li>
-                  <li className="hover-li">{t("contact")}</li>
+                  {list.map((i, index) => path === i.pathName? 
+                    (<a href={i.href} key={index}> 
+                    <div className="flex items-center gap-2">
+                      <button className="border-pink-400 border-3 h-min rounded-full"></button>
+                      <li className="hover-li">{i.name}</li>
+                    </div>
+                    </a>) 
+                  :
+                    (<a href={i.href} key={index}>
+                      <li className="hover-li">{i.name}</li>
+                    </a>)
+                  )}
                 </ul>
             <div>
-            <div className={`top-2 right-18 lg:right-36 absolute flex flex-wrap btn-lang figtree-400 text-[14px] ] rounded-lg h-10 max-w-[54px] ${turn ? 'h-fit' : ''}`} onClick={turnArrow}>
+            <div className={`top-2 right-18 md:right-36 absolute flex flex-wrap btn-lang figtree-400 text-[14px] ] rounded-lg h-10 max-w-[54px] ${turn ? 'h-fit' : ''}`} onClick={turnArrow}>
               <div className="flex items-center gap-2">
                 <button>{language === 'en' ? 'EN' : 'PT'}</button> 
                 <img src="/assets/arrow.png" alt="arrow icon" className={`w-min h-min arrow ${turn ? 'turn' : ''}`} />
@@ -57,7 +89,7 @@ const Nav = () => {
               </div>
             </div>
             </div>
-                <button className="btn figtree-400 w-28 hidden lg:inline-block">{t("cta")}</button>
+                <button className="btn figtree-400 w-28 hidden md:inline-block">{t("cta")}</button>
                 <button className={`menu_icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                   <img src="/assets/bar.png" alt="bar icon" className="bar bar1"/>
                   <img src="/assets/bar.png" alt="bar icon" className="bar bar2" />
@@ -66,12 +98,21 @@ const Nav = () => {
                   </div>
                 </div> 
     </nav>
-    <nav className={`flex justify-center lg:hidden w-full fixed top-20 z-50 ${isOpen ? '' : 'hidden'}`}>
+    <nav className={`flex justify-center md:hidden w-full fixed top-20 z-50 ${isOpen ? '' : 'hidden'}`}>
       <div className={`mobile-nav figtree-400`}>
                   <ul className={`flex flex-col gap-2 p-5 cursor-pointer`}>
-                    <li>HOME</li>
-                    <li>{t("projects")}</li>
-                    <li>{t("contact")}</li>
+                    {list.map((i, index) => path === i.pathName? 
+                    (<a href={i.href} key={index}> 
+                    <div className="flex items-center gap-2 justify-center">
+                      <button className="border-pink-400 border-3 h-min rounded-full"></button>
+                      <li className="">{i.name}</li>
+                    </div>
+                    </a>) 
+                  :
+                    (<a href={i.href} key={index}>
+                      <li className="">{i.name}</li>
+                    </a>)
+                  )}
                   </ul>
                   <button className="btn figtree-400 w-[85vw]">{t("cta")}</button>
       </div>
