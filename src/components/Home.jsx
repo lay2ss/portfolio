@@ -12,6 +12,7 @@ import GradientText from "/src/components/animations/GradientText.jsx";
 import Loop from "/src/components/animations/Loop.jsx";
 import SkillsCard from "./SkillsCard";
 import { skills } from "../data/skillsData";
+import LetterGlitch from '/src/components/animations/LetterGlitch.jsx';
 
 const Home = () => {
     
@@ -68,23 +69,26 @@ const Home = () => {
                     <div className="opacity-50 mt-13">
                         <Loop/>
                     </div>
-                    <div className="flex justify-center">
-                        <div>
-                            <h1 className="poppins-500 tracking-wide mb-5">
-                                What I do?
-                            </h1>
-                            <div className="flex flex-col gap-4">
-                                {skills.map((item) => (
-                                    <div key={item.id}>
-                                        <SkillsCard
-                                        header={item.headerEn}
-                                        desc={item.desc}
-                                        icon={item.icon}
-                                        />
-                                    </div>
-                                    ))}  
+                    <div className="flex justify-center lg:justify-between gap-10 lg:gap-0 flex-wrap items-center">
+                            <div>
+                                <h1 className="poppins-500 tracking-wide mb-5">
+                                    What I do?
+                                </h1>
+                                <div className="flex flex-col gap-4">
+                                    {skills.map((item) => (
+                                        <div key={item.id}>
+                                            <SkillsCard
+                                            header={item.headerEn}
+                                            desc={item.desc}
+                                            icon={item.icon}
+                                            />
+                                        </div>
+                                        ))}  
+                                </div>
                             </div>
-                        </div>
+                            <div className="w-[80%] lg:w-[50%] lg:mt-15 h-[50%] md:h-[40%] lg:h-fit">
+                                <LetterGlitch />
+                            </div>
                     </div>
             </div>
                 {/* <a href="#projects">
