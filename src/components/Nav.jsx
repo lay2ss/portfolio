@@ -83,7 +83,7 @@ const Nav = () => {
                   )}
                 </ul>
             <div>
-            <div className={`top-2 right-18 md:right-36 absolute flex flex-wrap btn-lang figtree-400 text-[14px] ] rounded-lg h-10 max-w-[54px] ${turn ? 'h-fit' : ''}`} onClick={turnArrow}>
+            <div className={`top-2 right-18 md:right-36 absolute flex flex-wrap btn-lang figtree-400 text-[14px] ] rounded-lg max-w-[54px] h-10 ${turn ? 'h-fit' : ''}`} onClick={turnArrow}>
               <div className="flex items-center gap-2">
                 <button>{language === 'en' ? 'EN' : 'PT'}</button> 
                 <img src="/assets/arrow.png" alt="arrow icon" className={`w-min h-min arrow ${turn ? 'turn' : ''}`} />

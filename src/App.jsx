@@ -14,9 +14,9 @@ function App() {
       <main>
         <Nav />
         <Home />
-        <ProjectsSection />
-        <SkillsSection />
-        <AboutSection />
+        {/* <ProjectsSection /> */}
+        {/* <SkillsSection />
+        <AboutSection /> */}
       </main> 
     </HashRouter>
    

@@ -9,12 +9,24 @@ html {
 :root{
     --pink: #FF69B4; /*#fccee8c3  #F4A6B9*/
     --background: #f3f3f310; /*#f3f3f310    #1414149c*/
+    --card-background: #1414149c;
     --border-color: #988a9136; 
     --gray: #f3f3f398;
 }
 .poppins-400 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  font-style: normal;
+}
+.poppins-500 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.figtree-300 {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-style: normal;
 }
 .figtree-400 {
@@ -91,6 +103,10 @@ html {
 .btn-s:hover{
   border-color: var(--pink);
 }
+.skills-card{
+  @apply border p-4 rounded-xl;
+  background-color: var(--card-background);
+}
 .hover-li {
   position: relative;
 }
@@ -119,6 +135,9 @@ h2{
 }
 h3{
   @apply text-white text-xl lg:text-2xl;
+}
+h4{
+  @apply text-white text-lg md:text-xl;
 }
 p{
   color: var(--gray);
@@ -160,6 +179,7 @@ p{
 .icon-card{
   @apply border w-fit rounded-xl p-3 cursor-pointer;
   border-color: var(--border-color);
+  background-color: var(--card-background);
 }
 .icon-card img{
   @apply opacity-60;

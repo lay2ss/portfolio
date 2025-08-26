@@ -10,6 +10,8 @@ import { useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import GradientText from "/src/components/animations/GradientText.jsx";
 import Loop from "/src/components/animations/Loop.jsx";
+import SkillsCard from "./SkillsCard";
+import { skills } from "../data/skillsData";
 
 const Home = () => {
     
@@ -50,7 +52,7 @@ const Home = () => {
                         colors={["#FF69B4", "#4079ff", "#FF69B4", "#4079ff", "#FF69B4"]}
                         animationSpeed={5}
                         showBorder={false}
-                        className="text-5xl md:text-6xl max-w-[280px]"
+                        className="text-5xl md:text-6xl max-w-[300px] poppins-400"
                         >
                         {t("greetingAccent")}
                     </GradientText>
@@ -60,11 +62,29 @@ const Home = () => {
                 </div>
                     <div className="flex gap-3 mt-4 md:mt-8">
                         <div className="icon-card"><img src="/assets/github_icon.svg" alt="github icon" /></div>
-                        <div className="icon-card"><img src="/assets/linkedin_icon.svg" alt="github icon" /></div>
-                        <div className="icon-card"><img src="/assets/gmail_icon.svg" alt="github icon" /></div>
+                        <div className="icon-card"><img src="/assets/linkedin_icon.svg" alt="linkedin icon" /></div>
+                        <div className="icon-card"><img src="/assets/gmail_icon.svg" alt="gmail icon" /></div>
                     </div>
                     <div className="opacity-50 mt-13">
                         <Loop/>
+                    </div>
+                    <div className="flex justify-center">
+                        <div>
+                            <h1 className="poppins-500 tracking-wide mb-5">
+                                What I do?
+                            </h1>
+                            <div className="flex flex-col gap-4">
+                                {skills.map((item) => (
+                                    <div key={item.id}>
+                                        <SkillsCard
+                                        header={item.headerEn}
+                                        desc={item.desc}
+                                        icon={item.icon}
+                                        />
+                                    </div>
+                                    ))}  
+                            </div>
+                        </div>
                     </div>
             </div>
                 {/* <a href="#projects">

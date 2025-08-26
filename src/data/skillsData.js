@@ -1,32 +1,23 @@
 export const skills = [
     {
         id: 1,
-        headerEn: 'Languages',
-        headerPt: 'Linguagens',
-        desc: 'JavaScript  TypeScript'
+        headerEn: 'Frontend Development',
+        headerPt: 'Desenvolvimento Frontend',
+        desc: 'JavaScript  TypeScript',
+        icon: "/assets/frontend.png"
     },
     {
         id: 2,
-        headerEn: 'Databases',
-        headerPt: 'Banco de dados',
-        desc: 'MongoDB'
+        headerEn: 'Backend Development',
+        headerPt: 'Desenvolvimento Backend',
+        desc: 'MongoDB',
+        icon: "/assets/backend.png"
     },
     {
         id: 3,
-        headerEn: 'Other',
-        headerPt: 'Outros',
-        desc: 'HTML  CSS  SCSS  Three.js  Mongoose'
-    },
-    {
-        id: 4,
-        headerEn: 'Frameworks',
-        headerPt: 'Frameworks',
-        desc: 'React  Next.js  Express.js  TailwindCSS  Node.js'
-    },
-    {
-        id: 5,
-        headerEn: 'Tools',
-        headerPt: 'Ferramentas',
-        desc: 'Git  Vercel  Vite'
-    },
+        headerEn: 'Mobile Development',
+        headerPt: 'Desenvolvimento Mobile',
+        desc: 'HTML  CSS  SCSS  Three.js  Mongoose',
+        icon: "/assets/mobile.png"
+    }
 ];
