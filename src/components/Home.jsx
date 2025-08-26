@@ -13,6 +13,8 @@ import Loop from "/src/components/animations/Loop.jsx";
 import SkillsCard from "./SkillsCard";
 import { skills } from "../data/skillsData";
 import LetterGlitch from '/src/components/animations/LetterGlitch.jsx';
+import { UltraHDRLoader } from "three/examples/jsm/Addons.js";
+import { lightPosition } from "three/src/nodes/TSL.js";
 
 const Home = () => {
     
@@ -79,7 +81,10 @@ const Home = () => {
                                         <div key={item.id}>
                                             <SkillsCard
                                             header={item.headerEn}
-                                            desc={item.desc}
+                                            desc={
+                                            item.desc.map((i, index) => (<li key={index} className="flex items-center gap-3">
+                                                                            <span className='border border-gray-400 rounded-full h-min'/> <p className="pt-1">{i}</p>
+                                                                        </li>))}
                                             icon={item.icon}
                                             />
                                         </div>
