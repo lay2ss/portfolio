@@ -6,7 +6,7 @@ import CanvasLoader from "./CanvasLoader";
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import GradientText from "/src/components/animations/GradientText.jsx";
 import Loop from "/src/components/animations/Loop.jsx";
@@ -24,6 +24,19 @@ const Home = () => {
     const isTablet = useMediaQuery({maxWidth:768, minWidth:450});
     const heroRef = useRef(null);
     const arrowRef = useRef(null);
+    const { i18n } = useTranslation();
+    const [language, setLanguage] = useState('');
+      
+      useEffect(() => {
+        setLanguage(i18n.language);
+        const onLanguageChanged = (lng) => {
+          setLanguage(lng);
+        };
+        i18n.on('languageChanged', onLanguageChanged);
+        return () => {
+          i18n.off('languageChanged', onLanguageChanged);
+        };
+      }, [i18n]);
 
     useGSAP(() => {
         gsap.fromTo(
@@ -55,7 +68,7 @@ const Home = () => {
                         colors={["#FF69B4", "#4079ff", "#FF69B4", "#4079ff", "#FF69B4"]}
                         animationSpeed={5}
                         showBorder={false}
-                        className="text-5xl md:text-6xl max-w-[300px] poppins-400"
+                        className="text-5xl md:text-6xl max-w-[340px] poppins-400"
                         >
                         {t("greetingAccent")}
                     </GradientText>
@@ -74,15 +87,15 @@ const Home = () => {
                     <div className="flex justify-center lg:justify-between gap-10 lg:gap-0 flex-wrap items-center">
                             <div>
                                 <h1 className="poppins-500 tracking-wide mb-5">
-                                    What I do?
+                                    {t('skillsTittle')}
                                 </h1>
                                 <div className="flex flex-col gap-4">
                                     {skills.map((item) => (
                                         <div key={item.id}>
                                             <SkillsCard
-                                            header={item.headerEn}
+                                            header={language === 'en' ? item.headerEn : item.headerPt}
                                             desc={
-                                            item.desc.map((i, index) => (<li key={index} className="flex items-center gap-3">
+                                            (language === 'en' ? item.desc : item.descPt).map((i, index) => (<li key={index} className="flex items-center gap-3">
                                                                             <span className='border border-gray-400 rounded-full h-min'/> <p className="pt-1">{i}</p>
                                                                         </li>))}
                                             icon={item.icon}
@@ -95,6 +108,7 @@ const Home = () => {
                                 <LetterGlitch />
                             </div>
                     </div>
+               
             </div>
                 {/* <a href="#projects">
                     <div><img ref={arrowRef} className="arrow2" src="/assets/arrow2.png" alt="arrow icon" /></div>
@@ -113,6 +127,7 @@ const Home = () => {
                 </Canvas>
             </div> */}   
         </div>
+         <span className="gray-bg h-[1px] block w-[90%] mx-auto"/>
     </section>
   )
 }

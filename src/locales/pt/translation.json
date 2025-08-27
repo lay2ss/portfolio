@@ -1,11 +1,12 @@
 {
   "greeting": "Oi, eu sou a",
-  "greetingAccent": "Software Developer",
+  "greetingAccent": "Desenv. de Software",
   "desc": "Desenvolvo soluções web funcionais, estratégicas e prontas para os desafios de amanhã — sempre guiada pela curiosidade e pela tecnologia.",
   "skills": "HABILIDADES",
   "projects": "PROJETOS",
   "contact": "CONTATO",
   "about": "SOBRE",
   "cta": "MENSAGEM",
-  "ctaPjc": "Ver todos"
+  "ctaPjc": "Ver todos",
+  "skillsTittle": "O que eu faço?"
 }

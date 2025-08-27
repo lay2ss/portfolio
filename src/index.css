@@ -45,6 +45,9 @@ html {
   font-weight: 400;
   font-style: italic;
 }
+.gray-bg{
+  background-color: var(--border-color);
+}
 .wrapper{
     @apply flex w-full justify-center;
 }
@@ -63,7 +66,7 @@ html {
     @apply hidden md:flex gap-6 items-center text-sm tracking-wider;
 }
 .mobile-nav{
-  @apply lg:hidden w-[90vw] h-[190px] text-center backdrop-blur-sm mt-[20px] rounded-xl;
+  @apply lg:hidden w-[90vw] h-[125px] text-center backdrop-blur-sm mt-[20px] rounded-xl;
   color: white;
   border: 1px solid var(--border-color);
 }
@@ -108,7 +111,7 @@ html {
   border-color: var(--pink);
 }
 .skills-card{
-  @apply border p-4 rounded-xl;
+  @apply border p-4 rounded-xl cursor-pointer;
   background-color: var(--card-background);
 }
 .hover-li {
