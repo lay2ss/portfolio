@@ -13,6 +13,10 @@ html {
     --border-color: #988a9136; 
     --gray: #f3f3f398;
 }
+::selection {
+  background: #bb628eb2;
+  color: #000;        
+}
 .poppins-400 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
