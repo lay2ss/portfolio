@@ -52,13 +52,13 @@ html {
     @apply flex w-full justify-center;
 }
 .section-wrapper{
-  @apply flex w-[90vw] lg:max-w-[1024px] flex-col;
+  @apply flex w-[90vw] lg:max-w-[1080px] flex-col;
 }
 .accent{
   color: var(--pink);
 }
 .nav{
-    @apply flex lg:max-w-[1024px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4 mt-[30px] rounded-full;
+    @apply flex lg:max-w-[1080px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4 mt-[30px] rounded-full;
     color: white;
     border: 1px solid var(--border-color);
 }

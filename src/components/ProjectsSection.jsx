@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import { projectsDataEn, projectsDataPt } from '../data/projectsData';
+import ShinyText from '/src/components/animations/ShinyText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,11 +61,20 @@ const ProjectsSection = () => {
       ease: 'power3.out',
     });
   };
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
 
   return (
-    <section className="wrapper" id="projects" ref={projectsRef}>
-        <div className='section-wrapper mt-30'>
-            <h1 className='figtree-400'><span className='accent tracking-widest'>/</span>{t("projects")}</h1>
+    <section className="wrapper h-auto mt-10 md:mt-15" id="projects" ref={projectsRef}>
+        <div className='section-wrapper'>
+            <ShinyText 
+              text={t("work")} 
+              disabled={false} 
+              speed={3} 
+              className='text-lg md:text-xl mb-2' 
+            />
+            <h1 className='poppins-500'><span className='accent tracking-widest'></span>{capitalize(t("projects"))}</h1>
           <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto'>
             {(language === 'en' ? projectsDataEn : projectsDataPt).map((item, index) => (
             <div
@@ -72,12 +82,12 @@ const ProjectsSection = () => {
             ref={el => cardsRef.current[index] = el}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}>
-              <ProjectsCard
+              {/* <ProjectsCard
               image = {item.image}
               tools = {item.tools.map((item, index) => (<span key={index}> <span className='accent'>#</span>{item}</span>))}
               header = {item.header}
               desc = {item.desc}
-              />
+              /> */}
             </div>
             ))}
           </div>

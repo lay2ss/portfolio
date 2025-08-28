@@ -57,7 +57,7 @@ const Home = () => {
     }, []);
 
   return (    
-    <section ref={heroRef} id="home" className="h-[100vh]">
+    <section ref={heroRef} id="home" className="h-auto">
         <div className="wrapper relative">
             <div className="flex flex-col space-y-2 md:space-y-4 p-10 md:p-20 mt-20 md:mt-10 ">
                 <div className="max-w-[280px]">
@@ -104,7 +104,7 @@ const Home = () => {
                                         ))}  
                                 </div>
                             </div>
-                            <div className="w-[80%] lg:w-[50%] lg:mt-15 h-[50%] md:h-[40%] lg:h-fit">
+                            <div className="w-full sm:w-[50%] md:w-full lg:w-[50%] lg:mt-15 h-[230px] md:h-[240px] lg:h-fit">
                                 <LetterGlitch />
                             </div>
                     </div>

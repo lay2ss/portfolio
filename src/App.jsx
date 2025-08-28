@@ -14,7 +14,7 @@ function App() {
       <main>
         <Nav />
         <Home />
-        {/* <ProjectsSection /> */}
+        <ProjectsSection />
         {/* <SkillsSection />
         <AboutSection /> */}
       </main> 
