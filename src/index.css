@@ -76,20 +76,21 @@ html {
     background-color: var(--pink);
 }
 .btn-card{
-  @apply text-white border-1 rounded-sm tracking-wider h-10 cursor-pointer text-sm flex gap-2 items-center;
+  @apply border-1 cursor-pointer flex items-center;
   border-color: var(--pink);
 }
 .btn-card:hover{
   background-color: var(--pink);
 }
 .btn-card-sec{
-  @apply text-white border-1 rounded-sm tracking-wider h-10 cursor-pointer text-sm p-2 flex gap-2 items-center;
+  @apply border-1 cursor-pointer  flex  items-center opacity-80;
   border-color: var(--border-color);
 }
 .btn-border{
   border-color: var(--border-color);
 }
 .btn-card-sec:hover{
+  @apply opacity-100;
   background-color: var(--border-color);
 }
 .btn:hover, .arrow2:hover{
@@ -161,27 +162,22 @@ p{
   background-color: var(--background);
   transform: translate(-50%, -50%);
 }
-.btn-arrow3{
-  @apply  border rounded-full flex items-center gap-3 px-3 py-2;
+.btn-project{
+  @apply  border rounded-full flex items-center gap-3 px-3 py-2 h-13 opacity-60;
   border: 1px solid var(--border-color);
-  background-color: var(--background);
+  background-color: var(--card-background);
 } 
-.arrow3{
-  transition: transform 0.3s ease;
-}
-.btn-arrow3:hover{
-  background-color: var(--border-color);
-}
-.btn-arrow3:hover .arrow3{
-  transform: rotate(40deg);
+.btn-project:hover{
+  @apply opacity-100;
+  background-color: var(--background);
 }
 .btn-card:hover .arrow3{
   transform: rotate(40deg); 
 }
 .card-border{
-  @apply border;
+  @apply border rounded-2xl;
   border-color: var(--border-color);
-  background-color: var(--background)
+  background-color: var(--background);
 }
 .icon-card{
   @apply border w-fit rounded-xl p-3 cursor-pointer;

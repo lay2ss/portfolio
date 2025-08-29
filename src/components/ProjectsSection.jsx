@@ -42,31 +42,13 @@ const ProjectsSection = () => {
     });
   }, []);
 
-  const handleMouseEnter = (i) => {
-    gsap.to(cardsRef.current[i], {
-      scale: 1.03,
-      y: -20,
-      zIndex: 10,
-      duration: 0.6,
-      ease: 'power3.out',
-    });
-  };
-
-  const handleMouseLeave = (i) => {
-    gsap.to(cardsRef.current[i], {
-      scale: 1,
-      y: 0,
-      zIndex: 1,
-      duration: 0.6,
-      ease: 'power3.out',
-    });
-  };
   function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
   return (
-    <section className="wrapper h-auto mt-10 md:mt-15" id="projects" ref={projectsRef}>
+    <section className="h-auto mt-10 md:mt-15" id="projects" ref={projectsRef}>
+      <div className='wrapper'>
         <div className='section-wrapper'>
             <ShinyText 
               text={t("work")} 
@@ -75,31 +57,31 @@ const ProjectsSection = () => {
               className='text-lg md:text-xl mb-2' 
             />
             <h1 className='poppins-500'><span className='accent tracking-widest'></span>{capitalize(t("projects"))}</h1>
-          <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto'>
+          <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto p-3 md:p-0'>
             {(language === 'en' ? projectsDataEn : projectsDataPt).map((item, index) => (
             <div
             key={item.id}
             ref={el => cardsRef.current[index] = el}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}>
-              {/* <ProjectsCard
+          >
+              <ProjectsCard
               image = {item.image}
               tools = {item.tools.map((item, index) => (<span key={index}> <span className='accent'>#</span>{item}</span>))}
               header = {item.header}
-              desc = {item.desc}
-              /> */}
+              />
             </div>
             ))}
           </div>
-          <div className='flex justify-center py-10'>
-            <button className='btn-arrow3 figtree-400 cursor-pointer'>
-              <p>{t("ctaPjc")}</p>
+          <div className='flex py-10 w-full'>
+            <button className='btn-project figtree-400 cursor-pointer w-full justify-center'>
+              <span className='text-white poppins-400 md:text-lg'>{t("ctaPjc")}</span>
               <div className=''>
-                <img src="/assets/arrow3.png" alt="" className='w-min h-min arrow3' />
+                <img src="/assets/github_icon.svg" alt="github icon" className='w-min h-min' />
               </div>
             </button>
           </div>
         </div>
+      </div>
+        <span className="gray-bg h-[1px] block w-[90%] mx-auto"/>
     </section>
   )
 }
