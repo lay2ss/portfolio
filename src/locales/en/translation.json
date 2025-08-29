@@ -2,12 +2,14 @@
   "greeting": "Hi, I'm",
   "greetingAccent": "Software Developer",
   "desc": "I craft thoughtful, functional, and future-ready web experiences, driven by curiosity and code.",
-  "skills": "SKILLS",
   "projects": "PROJECTS",
   "about": "ABOUT",
   "contact": "CONTACT",
-  "cta": "LET'S TALK",
+  "cta": "Let's talk",
   "ctaPjc": "More projects on",
   "skillsTittle": "What I do?",
-  "work": "My work"
+  "work": "My work",
+  "contactText": "Got an idea or need some guidance? I'm just a message away.",
+  "location": "Location:",
+  "country": "Brazil"
 }

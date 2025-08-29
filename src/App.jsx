@@ -1,8 +1,8 @@
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import ParticleBackground from "./components/background/ParticleBackground";
-import ProjectsSection from "./components/ProjectsSection";
-import SkillsSection from "./components/SkillsSection";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import AboutSection from "./components/AboutSection";
 import { HashRouter } from "react-router-dom";
 
@@ -14,9 +14,8 @@ function App() {
       <main>
         <Nav />
         <Home />
-        <ProjectsSection />
-        {/* <SkillsSection />
-        <AboutSection /> */}
+        <Projects />
+        <Contact />
       </main> 
     </HashRouter>
    

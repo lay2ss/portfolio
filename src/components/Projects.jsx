@@ -9,7 +9,7 @@ import ShinyText from '/src/components/animations/ShinyText';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectsSection = () => {
+const Projects = () => {
   const cardsRef = useRef([]);
   const projectsRef = useRef(null);
   
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
             ))}
           </div>
           <div className='flex py-10 w-full'>
-            <button className='btn-project figtree-400 cursor-pointer w-full justify-center'>
+            <button className='btn-project figtree-400 cursor-pointer w-full justify-center hover:scale-105 transition-transform duration-300'>
               <span className='text-white poppins-400 md:text-lg'>{t("ctaPjc")}</span>
               <div className=''>
                 <img src="/assets/github_icon.svg" alt="github icon" className='w-min h-min' />
@@ -86,4 +86,4 @@ const ProjectsSection = () => {
   )
 }
 
-export default ProjectsSection;
+export default Projects;

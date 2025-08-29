@@ -2,12 +2,14 @@
   "greeting": "Oi, eu sou a",
   "greetingAccent": "Desenv. de Software",
   "desc": "Desenvolvo soluções web funcionais, estratégicas e prontas para os desafios de amanhã — sempre guiada pela curiosidade e pela tecnologia.",
-  "skills": "HABILIDADES",
   "projects": "PROJETOS",
   "contact": "CONTATO",
   "about": "SOBRE",
-  "cta": "MENSAGEM",
+  "cta": "Vamos conversar",
   "ctaPjc": "Mais projetos no",
   "skillsTittle": "O que eu faço?",
-  "work": "Meu trabalho"
+  "work": "Meu trabalho",
+  "contactText": "Teve uma ideia ou precisa de alguma ajuda? É só me chamar.",
+  "location": "Localização:",
+  "country": "Brasil"
 }
