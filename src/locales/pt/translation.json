@@ -11,5 +11,9 @@
   "work": "Meu trabalho",
   "contactText": "Teve uma ideia ou precisa de alguma ajuda? É só me chamar.",
   "location": "Localização:",
-  "country": "Brasil"
+  "country": "Brasil",
+  "name": "Nome",
+  "email": "E-mail",
+  "message": "Mensagem",
+  "submit": "Enviar"
 }

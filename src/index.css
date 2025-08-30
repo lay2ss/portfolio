@@ -49,7 +49,7 @@ html {
   background-color: var(--border-color);
 }
 .wrapper{
-    @apply flex w-full justify-center;
+  @apply flex w-full justify-center;
 }
 .section-wrapper{
   @apply flex w-[90vw] lg:max-w-[1080px] flex-col;
@@ -58,12 +58,12 @@ html {
   color: var(--pink);
 }
 .nav{
-    @apply flex lg:max-w-[1080px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4 mt-[30px] rounded-full;
-    color: white;
-    border: 1px solid var(--border-color);
+  @apply flex lg:max-w-[1080px] justify-between w-[90vw] h-[60px]  backdrop-blur-sm items-center box-border p-4 mt-[30px] rounded-full;
+  color: white;
+  border: 1px solid var(--border-color);
 }
 .desktop-nav{
-    @apply hidden md:flex gap-6 items-center text-sm tracking-wider;
+  @apply hidden md:flex gap-6 items-center text-sm tracking-wider;
 }
 .mobile-nav{
   @apply lg:hidden w-[90vw] h-[125px] text-center backdrop-blur-sm mt-[20px] rounded-xl;
@@ -71,9 +71,9 @@ html {
   border: 1px solid var(--border-color);
 }
 .btn{
-    @apply text-white border-0 rounded-full tracking-wider h-10 hover:bg-pink-400 cursor-pointer text-sm;
-    border: 1px solid var(--pink);
-    background-color: var(--pink);
+  @apply text-white border-0 rounded-full tracking-wider h-10 hover:bg-pink-400 cursor-pointer text-sm;
+  border: 1px solid var(--pink);
+  background-color: var(--pink);
 }
 .btn-card{
   @apply border-1 cursor-pointer flex items-center;
@@ -193,21 +193,30 @@ p{
 .icon-card:hover img{
   @apply opacity-100;
 }
-/* .wave-hand {
-  display: inline-block;
-  animation: wave 1.5s infinite;
-  transform-origin: 70% 70%;
-} */
-/* @keyframes wave {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  30% { transform: rotate(14deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
-} */
+input {
+  @apply border rounded-lg h-10 w-full px-4 focus:outline-none;
+  border-color: var(--border-color);
+  background-color: var(--card-background);
+}
+input:focus{
+  @apply border-2;
+  border-color: var(--pink);
+}
+textarea {
+  background-color: var(--card-background);
+}
+textarea:focus{
+  @apply border-2;
+  border-color: var(--pink);
+}
+.btn-form{
+  @apply opacity-80 border h-10 rounded-lg cursor-pointer;
+  background-color: var(--background);
+  color: var(--gray);
+}
+.btn-form:hover{
+  @apply opacity-100 text-white;
+}
 
 
 

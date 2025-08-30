@@ -11,5 +11,9 @@
   "work": "My work",
   "contactText": "Got an idea or need some guidance? I'm just a message away.",
   "location": "Location:",
-  "country": "Brazil"
+  "country": "Brazil",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "submit": "Submit"
 }
