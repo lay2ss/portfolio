@@ -3,16 +3,16 @@ export const skills = [
         id: 1,
         headerEn: 'Frontend Development',
         headerPt: 'Desenvolvimento Frontend',
-        desc: ['Landing pages and portfolio websites', 'GSAP-powered animations', 'Performance and SEO'],
-        descPt: ['Landing pages e sites de portfólio', 'Animações com GSAP', 'Performance e SEO'],
+        desc: ['Single Page Applications (SPAs)', 'GSAP-powered animations', 'Performance and SEO'],
+        descPt: ['Aplicações de Página Única (SPAs)', 'Animações com GSAP', 'Performance e SEO'],
         icon: "/assets/frontend.png"
     },
     {
         id: 2,
         headerEn: 'Backend Development',
         headerPt: 'Desenvolvimento Backend',
-        desc: ['Single Page Applications (SPAs)', 'API Development (REST/GraphQL)', 'CRUD Operations'],
-        descPt: ['Aplicações de Página Única (SPAs)', 'Desenvolvimento de API (REST/GraphQL)', 'Operações CRUD'],
+        desc: ['API Development (REST/GraphQL)', 'Authentication and Authorization', 'CRUD Operations'],
+        descPt: ['Desenvolvimento de API (REST/GraphQL)', 'Autenticação e Autorização', 'Operações CRUD'],
         icon: "/assets/backend.png"
     },
     {

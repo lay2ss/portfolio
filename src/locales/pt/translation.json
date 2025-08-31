@@ -15,5 +15,10 @@
   "name": "Nome",
   "email": "E-mail",
   "message": "Mensagem",
-  "submit": "Enviar"
+  "submit": "Enviar",
+  "built": "Feito com",
+  "styled": "Estilizado com",
+  "deployed": "Hospedado no",
+  "made" : "Feito com",
+  "by": "por"
 }

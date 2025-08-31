@@ -15,5 +15,10 @@
   "name": "Name",
   "email": "Email",
   "message": "Message",
-  "submit": "Submit"
+  "submit": "Submit",
+  "built": "Built with",
+  "styled": "Styled with",
+  "deployed": "Deployed on",
+  "made" : "Made with",
+  "by": "by"
 }

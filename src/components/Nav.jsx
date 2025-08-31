@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import '/src/menuIcon.css';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from "react-router-dom";
-import { useScrollUrlUpdater } from "./useScrollUrlUpdater";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,15 +8,7 @@ const Nav = () => {
 
   const { t } = useTranslation();
   const { i18n } = useTranslation();
-  const location = useLocation();
-  const [path, setpath] = useState();
   const [language, setLanguage] = useState('');
-
-  useScrollUrlUpdater();
-  
-  useEffect(() => {
-    setpath(location.pathname)
-  }, [location.pathname]);
 
   useEffect(() => {
     setLanguage(i18n.language);
@@ -69,14 +59,7 @@ const Nav = () => {
           </div>
             <div className="flex gap-22 cursor-pointer items-center">
                 <ul className="desktop-nav figtree-400">
-                  {list.map((i, index) => path === i.pathName ? 
-                    (<a href={i.href} key={index}> 
-                    <div className="flex items-center gap-2">
-                      <button className="border-pink-400 border-3 h-min rounded-full"></button>
-                      <li className="hover-li">{i.name}</li>
-                    </div>
-                    </a>) 
-                  :
+                  {list.map((i, index) => 
                     (<a href={i.href} key={index}>
                       <li className="hover-li">{i.name}</li>
                     </a>)
@@ -93,7 +76,6 @@ const Nav = () => {
               </div>
             </div>
             </div>
-                {/* <button className="btn figtree-400 w-28 hidden md:inline-block">{t("cta")}</button> */}
                 <button className={`menu_icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                   <img src="/assets/bar.png" alt="bar icon" className="bar bar1"/>
                   <img src="/assets/bar.png" alt="bar icon" className="bar bar2" />
@@ -111,7 +93,6 @@ const Nav = () => {
                     </a>)
                   )}
                   </ul>
-                  {/* <button className="btn figtree-400 w-[85vw]">{t("cta")}</button> */}
       </div>
     </nav>
     </>

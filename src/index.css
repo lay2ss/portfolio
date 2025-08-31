@@ -7,8 +7,8 @@ html {
   scroll-behavior: smooth;
 }
 :root{
-    --pink: #FF69B4; /*#fccee8c3  #F4A6B9*/
-    --background: #f3f3f310; /*#f3f3f310    #1414149c*/
+    --pink: #FF69B4;
+    --background: #f3f3f310;
     --card-background: #1414149c;
     --border-color: #988a9136; 
     --gray: #f3f3f398;
@@ -38,12 +38,6 @@ html {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
-.lora-400 {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: italic;
 }
 .gray-bg{
   background-color: var(--border-color);
@@ -156,12 +150,6 @@ p{
 .turn {
   transform: rotate(180deg);
 }
-.arrow2{
-  @apply absolute bottom-0 rounded-full box-border p-1;
-  border: 1px solid var(--border-color);
-  background-color: var(--background);
-  transform: translate(-50%, -50%);
-}
 .btn-project{
   @apply  border rounded-full flex items-center gap-3 px-3 py-2 h-13 opacity-60;
   border: 1px solid var(--border-color);
@@ -190,6 +178,9 @@ p{
 .icon-card:hover{
   background-color: var(--background);
 }
+.icon-n-card{
+  @apply opacity-60 hover:opacity-100 cursor-pointer;
+}
 .icon-card:hover img{
   @apply opacity-100;
 }
@@ -217,6 +208,3 @@ textarea:focus{
 .btn-form:hover{
   @apply opacity-100 text-white;
 }
-
-
-
