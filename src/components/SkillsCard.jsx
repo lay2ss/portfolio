@@ -39,11 +39,11 @@ const SkillsCard = ({ header, desc, icon }) => {
     <div ref={containerRef} onClick={toggleCard} className="btn-border skills-card sm:w-85 md:w-100 select-none overflow-hidden">
       <div className={`flex items-center justify-between gap-5 ${isOpen ? 'pb-3' : ''}`}>
         <div className='flex gap-3 items-center'>
-          <img src={icon} alt="icon" />
+          <img src={icon} alt="icon" loading="lazy"/>
           <h4 className='figtree-300 opacity-90'>{header}</h4>
         </div>
         <div>
-          <img src="/assets/arrow.png" alt="arrow icon" className={`arrow pr-1 transition-transform duration-300 ${isOpen ? 'turn' : ''}`}/>
+          <img src="/assets/arrow.png" alt="arrow icon" className={`arrow pr-1 transition-transform duration-300 ${isOpen ? 'turn' : ''}`} loading="lazy"/>
         </div>
       </div>
       <div ref={contentRef} style={{ height: 0 }} className="overflow-hidden">

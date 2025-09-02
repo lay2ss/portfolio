@@ -67,9 +67,15 @@ const Home = () => {
                     </div>
                 </div>
                     <div className="flex gap-3 mt-4 md:mt-8">
-                        <div className="icon-card"><img src="/assets/github_icon.svg" alt="github icon" /></div>
-                        <div className="icon-card"><img src="/assets/linkedin_icon.svg" alt="linkedin icon" /></div>
-                        <div className="icon-card"><img src="/assets/gmail_icon.svg" alt="gmail icon" /></div>
+                        <a href="https://github.com/lay2ss" aria-label="Github">
+                            <div className="icon-card"><img src="/assets/github_icon.svg" alt="github icon" loading="lazy"/></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/la%C3%ADs-correia-dev/" aria-label="Linkedin">
+                            <div className="icon-card"><img src="/assets/linkedin_icon.svg" alt="linkedin icon" loading="lazy"/></div>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=dev1lais.c@gmail.com&su=Hey!&tf=cm" aria-label="Gmail">
+                            <div className="icon-card"><img src="/assets/gmail_icon.svg" alt="gmail icon" loading="lazy"/></div>
+                        </a>
                     </div>
                     <div className="opacity-50 mt-13">
                         <Loop/>
