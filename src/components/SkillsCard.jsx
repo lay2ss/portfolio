@@ -43,7 +43,7 @@ const SkillsCard = ({ header, desc, icon }) => {
           <h4 className='figtree-300 opacity-90'>{header}</h4>
         </div>
         <div>
-          <img src="/assets/arrow.png" alt="arrow icon" className={`arrow pr-1 transition-transform duration-300 ${isOpen ? 'turn' : ''}`} loading="lazy"/>
+          <img src="/assets/icons/arrow.png" alt="arrow icon" className={`arrow pr-1 transition-transform duration-300 ${isOpen ? 'turn' : ''}`} loading="lazy"/>
         </div>
       </div>
       <div ref={contentRef} style={{ height: 0 }} className="overflow-hidden">

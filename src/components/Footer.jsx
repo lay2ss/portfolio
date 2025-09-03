@@ -68,7 +68,7 @@ const Footer = () => {
         <span className="gray-bg h-[1px] block w-[90%] mx-auto lg:max-w-[1080px] mt-10"/>
         <div className='flex justify-center w-full gap-1 py-6 poppins-300'> 
             <p>{t("made")}</p>
-            <img src="/assets/heart.png" alt="heart icon" loading="lazy"/>
+            <img src="/assets/icons/heart.png" alt="heart icon" loading="lazy"/>
             <p>{t("by")} &#64;lay2ss</p>
         </div>
     </footer>

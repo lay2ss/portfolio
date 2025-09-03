@@ -13,12 +13,12 @@ const ProjectsCard = ({image, tools, header, preview, code}) => {
         <div className="flex gap-3 h-min">
             <a href={preview} aria-label="Preview">
                 <button className="btn-card p-4 figtree-400 rounded-xl min-w-14 min-h-14">
-                    <img className="h-min" src="/assets/live.png" alt="live icon" loading="lazy"/>
+                    <img className="h-min" src="/assets/icons/live.png" alt="live icon" loading="lazy"/>
                 </button>
             </a>
             <a href={code} aria-label="Github">
                 <button className="btn-card-sec figtree-400 p-4 rounded-xl min-w-14 min-h-14">
-                    <img className="h-min" src="/assets/code.png" alt="code icon" loading="lazy"/>
+                    <img className="h-min" src="/assets/icons/code.png" alt="code icon" loading="lazy"/>
                 </button> 
             </a>
         </div>

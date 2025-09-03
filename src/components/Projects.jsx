@@ -78,7 +78,7 @@ const Projects = () => {
                 <a href="https://github.com/lay2ss" className='flex gap-3 items-center'>
                   <span className='text-white poppins-400 md:text-lg'>{t("ctaPjc")}</span>
                   <div className=''>
-                    <img src="/assets/github_icon.svg" alt="github icon" className='w-min h-min' loading="lazy"/>
+                    <img src="/assets/icons/github_icon.svg" alt="github icon" className='w-min h-min' loading="lazy"/>
                   </div>
                 </a>
               </button>

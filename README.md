@@ -1,12 +1,22 @@
-# React + Vite
+This is my personal portfolio.  
+Here you can explore some of the projects I've built and shared so far.  
+More projects will be added soon.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Design inspired by [Oscar Hernandez's portfolio](https://oscarhernandez.vercel.app/).  
+> All code and implementation were created from scratch.  
+> Animated UI components powered by [React Bits](https://www.reactbits.dev/).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é o meu portfólio pessoal.  
+Aqui você pode conhecer alguns dos projetos que desenvolvi e compartilhei até agora.  
+Em breve, novos projetos serão adicionados.
 
-## Expanding the ESLint configuration
+> O design foi inspirado no [portfólio de Oscar Hernandez](https://oscarhernandez.vercel.app/).  
+> Todo o código e implementação foram feitos do zero.  
+> Componentes animados de UI fornecidos por [React Bits](https://www.reactbits.dev/).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+![Preview](public/assets/images/preview.jpg)  
+👉 [Access the live project here]()
