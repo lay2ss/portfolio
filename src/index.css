@@ -45,6 +45,9 @@ html {
 .wrapper{
   @apply flex w-full justify-center;
 }
+section {
+  scroll-margin-top: 90px;
+}
 .section-wrapper{
   @apply flex w-[90vw] lg:max-w-[1080px] flex-col;
 }
