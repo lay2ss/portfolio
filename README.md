@@ -2,7 +2,7 @@
 
 ![Preview](public/assets/images/preview.jpg)  
 
-👉 [Access the live project here]()
+👉 [Access the live project here](https://lay2ss-portfolio.vercel.app/)
 
 ---
 
