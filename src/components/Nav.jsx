@@ -72,7 +72,7 @@ const Nav = () => {
                 <img src="/assets/icons/arrow.png" alt="arrow icon" className={`w-min h-min arrow ${turn ? 'turn' : ''}`} loading="lazy"/>
               </div> 
               <div className={`flex w-full mt-2 border btn-s ${turn ? '' : 'hidden'}`}>
-                <button className={`w-full figtree-400 text-[14px] cursor-pointer ${turn ? '' : ''}`} onClick={() => language === 'en' ? changeLanguage('pt') : changeLanguage('en')}>{language === 'en' ? 'PT' : 'EN'}</button>
+                <button className={`w-full figtree-400 text-[14px] cursor-pointer ${turn ? '' : ''}`} onClick={() => language === 'en' ? changeLanguage('pt') : changeLanguage('en')}>{language === 'pt' ? 'EN' : 'PT'}</button>
               </div>
             </div>
             </div>
