@@ -85,9 +85,9 @@ const Home = () => {
                                     {skills.map((item) => (
                                         <div key={item.id}>
                                             <SkillsCard
-                                            header={language === 'en' ? item.headerEn : item.headerPt}
+                                            header={language === 'pt' ? item.headerPt : item.headerEn}
                                             desc={
-                                            (language === 'en' ? item.desc : item.descPt).map((i, index) => (<li key={index} className="flex items-center gap-3">
+                                            (language === 'pt' ? item.descPt : item.desc).map((i, index) => (<li key={index} className="flex items-center gap-3">
                                                                             <span className='border border-gray-400 rounded-full h-min'/> <p className="pt-1">{i}</p>
                                                                         </li>))}
                                             icon={item.icon}

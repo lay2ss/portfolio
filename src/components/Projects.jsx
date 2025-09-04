@@ -58,7 +58,7 @@ const Projects = () => {
             />
             <h1 className='poppins-500'><span className='accent tracking-widest'></span>{capitalize(t("projects"))}</h1>
           <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto p-3 md:p-0'>
-            {(language === 'en' ? projectsDataEn : projectsDataPt).map((item, index) => (
+            {(language === 'pt' ? projectsDataPt : projectsDataEn).map((item, index) => (
             <div
             key={item.id}
             ref={el => cardsRef.current[index] = el}
