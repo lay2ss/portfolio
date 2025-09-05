@@ -20,5 +20,18 @@
   "styled": "Estilizado com",
   "deployed": "Hospedado no",
   "made" : "Feito com",
-  "by": "por"
+  "by": "por",
+  "language": "PT",
+  "switchLanguage": "EN",
+  "header1": "Desenvolvimento Frontend",
+  "header2": "Desenvolvimento Backend",
+  "header3": "Desenvolvimento Mobile",
+  "desc1.1": "Aplicações de Página Única (SPAs)",
+  "desc1.2": "Animações com GSAP",
+  "desc1.3": "Performance e SEO",
+  "desc2.1": "Desenvolvimento de API (REST/GraphQL)",
+  "desc2.2": "Autenticação e Autorização",
+  "desc2.3": "Operações CRUD",
+  "desc3.1": "Desenvolvimento multiplataforma com React Native",
+  "desc3.2": "Integração com recursos nativos do dispositivo"
 }

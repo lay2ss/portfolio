@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState } from 'react';
 import { useGSAP } from '@gsap/react';
-import { projectsDataEn, projectsDataPt } from '../data/projectsData';
+import { projectsData } from '../data/projectsData';
 import ShinyText from '/src/components/animations/ShinyText';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -58,15 +58,15 @@ const Projects = () => {
             />
             <h1 className='poppins-500'><span className='accent tracking-widest'></span>{capitalize(t("projects"))}</h1>
           <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto p-3 md:p-0'>
-            {(language === 'pt' ? projectsDataPt : projectsDataEn).map((item, index) => (
+            {projectsData.map((item, index) => (
             <div
             key={item.id}
             ref={el => cardsRef.current[index] = el}
           >
               <ProjectsCard
               image = {item.image}
-              tools = {item.tools.map((item, index) => (<span key={index}> <span className='accent'>#</span>{item}</span>))}
-              header = {item.header}
+              tools = {item.tools.map((item) => (<span key={item}> <span className='accent'>#</span>{item}</span>))}
+              name = {item.name}
               code = {item.code}
               preview = {item.preview}
               />

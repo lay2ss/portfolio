@@ -68,11 +68,11 @@ const Nav = () => {
             <div>
             <div className={`top-2 right-18 md:right-6 absolute flex flex-wrap btn-lang figtree-400 text-[14px] rounded-lg max-w-[54px] h-10 ${turn ? 'h-fit' : ''}`} onClick={turnArrow}>
               <div className="flex items-center gap-2">
-                <button>{language === 'pt' ? 'PT' : 'EN'}</button> 
+                <button>{t("language")}</button> 
                 <img src="/assets/icons/arrow.png" alt="arrow icon" className={`w-min h-min arrow ${turn ? 'turn' : ''}`} loading="lazy"/>
               </div> 
               <div className={`flex w-full mt-2 border btn-s ${turn ? '' : 'hidden'}`}>
-                <button className={`w-full figtree-400 text-[14px] cursor-pointer ${turn ? '' : ''}`} onClick={() => language === 'pt' ? changeLanguage('en') : changeLanguage('pt')}>{language === 'pt' ? 'EN' : 'PT'}</button>
+                <button className={`w-full figtree-400 text-[14px] cursor-pointer ${turn ? '' : ''}`} onClick={() => language === 'pt' ? changeLanguage('en') : changeLanguage('pt')}>{t("switchLanguage")}</button>
               </div>
             </div>
             </div>

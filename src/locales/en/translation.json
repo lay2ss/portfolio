@@ -20,5 +20,18 @@
   "styled": "Styled with",
   "deployed": "Deployed on",
   "made" : "Made with",
-  "by": "by"
+  "by": "by",
+  "language": "EN",
+  "switchLanguage": "PT",
+  "header1": "Frontend Development",
+  "header2": "Backend Development",
+  "header3": "Mobile Development",
+  "desc1.1": "Single Page Applications (SPAs)",
+  "desc1.2": "GSAP-powered animations",
+  "desc1.3": "Performance and SEO",
+  "desc2.1": "API Development (REST/GraphQL)",
+  "desc2.2": "Authentication and Authorization",
+  "desc2.3": "CRUD Operations",
+  "desc3.1": "Cross-platform development with React Native",
+  "desc3.2": "Integration with native device features"
 }

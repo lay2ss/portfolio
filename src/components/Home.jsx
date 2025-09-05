@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 import GradientText from "/src/components/animations/GradientText.jsx";
 import Loop from "/src/components/animations/Loop.jsx";
 import SkillsCard from "./SkillsCard";
-import { skills } from "../data/skillsData";
 import LetterGlitch from '/src/components/animations/LetterGlitch.jsx';
 import { social } from "../data/socialData";
+import { skills } from "../data/skillsData";
 
 const Home = () => {
     
@@ -85,10 +85,10 @@ const Home = () => {
                                     {skills.map((item) => (
                                         <div key={item.id}>
                                             <SkillsCard
-                                            header={language === 'pt' ? item.headerPt : item.headerEn}
+                                            header={t(item.header)}
                                             desc={
-                                            (language === 'pt' ? item.descPt : item.desc).map((i, index) => (<li key={index} className="flex items-center gap-3">
-                                                                            <span className='border border-gray-400 rounded-full h-min'/> <p className="pt-1">{i}</p>
+                                            item.desc.map((i) => (<li key={t(i)} className="flex items-center gap-3">
+                                                                            <span className='border border-gray-400 rounded-full h-min'/> <p className="pt-1">{t(i)}</p>
                                                                         </li>))}
                                             icon={item.icon}
                                             />

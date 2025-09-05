@@ -1,4 +1,4 @@
-const ProjectsCard = ({image, tools, header, preview, code}) => {  
+const ProjectsCard = ({image, tools, name, preview, code}) => {  
   return (
     <>
     <div className="card-border p-3">
@@ -7,7 +7,7 @@ const ProjectsCard = ({image, tools, header, preview, code}) => {
                 <img src={image}  alt="project image" className="object-cover rounded-xl hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy"/>
             </a>
         </div>
-        <h2 className="mt-5 figtree-400">{header}</h2>
+        <h2 className="mt-5 figtree-400">{name}</h2>
         <div className="flex gap-7 justify-between items-center mb-2">
         <p className="poppins-400 text-sm">{tools}</p>
         <div className="flex gap-3 h-min">
