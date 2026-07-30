@@ -1,7 +1,7 @@
 {
   "greeting": "Hi, I'm",
   "greetingAccent": "Software Developer",
-  "desc": "I craft thoughtful, functional, and future-ready web experiences, driven by curiosity and code.",
+  "desc": "Transforming ideas into thoughtful digital experiences, always learning, always building.",
   "projects": "PROJECTS",
   "about": "ABOUT",
   "contact": "CONTACT",
@@ -25,13 +25,13 @@
   "switchLanguage": "PT",
   "header1": "Frontend Development",
   "header2": "Backend Development",
-  "header3": "Mobile Development",
+  "header3": "3D Art & Modeling",
   "desc1.1": "Single Page Applications (SPAs)",
   "desc1.2": "GSAP-powered animations",
   "desc1.3": "Performance and SEO",
-  "desc2.1": "API Development (REST/GraphQL)",
+  "desc2.1": "API Development (RESTful)",
   "desc2.2": "Authentication and Authorization",
   "desc2.3": "CRUD Operations",
-  "desc3.1": "Cross-platform development with React Native",
-  "desc3.2": "Integration with native device features"
+  "desc3.1": "Passionate about stylized 3D character creation",
+  "desc3.2": "Continuously learning modeling and sculpting"
 }

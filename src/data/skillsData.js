@@ -15,7 +15,7 @@ export const skills = [
         id: 3,
         header: "header3",
         desc: ["desc3.1", "desc3.2"],
-        icon: "/assets/icons/mobile.png"
+        icon: "/assets/icons/3d.png"
     }
 ];
  

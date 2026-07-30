@@ -1,7 +1,7 @@
 {
   "greeting": "Oi, eu sou a",
   "greetingAccent": "Desenv. de Software",
-  "desc": "Desenvolvo soluções web funcionais, estratégicas e prontas para os desafios de amanhã — sempre guiada pela curiosidade e pela tecnologia.",
+  "desc": "Acredito que as melhores experiências digitais nascem da curiosidade, da criatividade e da vontade de aprender.",
   "projects": "PROJETOS",
   "contact": "CONTATO",
   "about": "SOBRE",
@@ -25,13 +25,13 @@
   "switchLanguage": "EN",
   "header1": "Desenvolvimento Frontend",
   "header2": "Desenvolvimento Backend",
-  "header3": "Desenvolvimento Mobile",
+  "header3": "Arte 3D & Modelagem",
   "desc1.1": "Aplicações de Página Única (SPAs)",
   "desc1.2": "Animações com GSAP",
   "desc1.3": "Performance e SEO",
-  "desc2.1": "Desenvolvimento de API (REST/GraphQL)",
+  "desc2.1": "Desenvolvimento de API (RESTful)",
   "desc2.2": "Autenticação e Autorização",
   "desc2.3": "Operações CRUD",
-  "desc3.1": "Desenvolvimento multiplataforma com React Native",
-  "desc3.2": "Integração com recursos nativos do dispositivo"
+  "desc3.1": "Apaixonada pela criação de personagens 3D estilizados",
+  "desc3.2": "Aprendendo continuamente modelagem e escultura digital"
 }
