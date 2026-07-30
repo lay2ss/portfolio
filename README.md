@@ -2,13 +2,12 @@
 
 ![Preview](public/assets/images/preview.jpg)  
 
-👉 [Access the live project here](https://lay2ss-portfolio.vercel.app/)
+🔗 [Access the live project here](https://lay2ss-portfolio.vercel.app/)
 
 ---
 
 This is my personal portfolio.  
 Here you can explore some of the projects I've built and shared so far.  
-More projects will be added soon.
 
 > Design inspired by [Oscar Hernandez's portfolio](https://oscarhernandez.vercel.app/).  
 > All code and implementation were created from scratch.  
